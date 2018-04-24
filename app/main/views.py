@@ -4,6 +4,11 @@ from flask_login import login_required,current_user
 from ..models import User,Blog
 from .. import db
 
+@main.route('/')
+def index():
+
+    return render_template('index.html')
+
 @main.route('/about')
 def about():
     return render_template("about.html")
@@ -11,9 +16,9 @@ def about():
 @main.route('/')
 def index():
 
- blogs = Blog.query.order_by(Blog.date_posted.desc()).all()
- title ="Blog Your Blogs"
- return render_template('index.html', title=title)
+ blogs = Blog.get_blog()
+ title ="Gamers Blogs"
+ return render_template('index.html', title=title,GamersBlogs=Gamersblogs)
 
 @main.route('/admin/dashboard')
 @login_required
