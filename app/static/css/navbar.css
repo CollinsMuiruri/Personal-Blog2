@@ -1,0 +1,7 @@
+body{
+  background-image: image(../static/flat.jpg);
+  font-family: 'Philosopher', sans-serif;
+}
+p{
+  font-family: 'Philosopher', sans-serif;
+}
