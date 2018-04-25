@@ -45,3 +45,4 @@ class Blog(db.Model):
    content = db.Column(db.Text)
 
 admin.add_view(ModelView(User,db.session))
+admin.add_view(ModelView(Blog,db.session))
